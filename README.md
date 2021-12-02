@@ -6,14 +6,14 @@ This package works with Julia v1.7.0 *only*.
 
 The SetBlasInt package exports a single function, `setblasint`, which re-defines methods inside the `LinearAlgebra.BLAS` module to use a specified type of integer in calls to linear algebra subroutines. (The redefinition is done via `eval` on code modified from julia/stdlib/LinearAlgebra/src/blas.jl)
 
-This allows for re-directing calls to libraries with 32 bit indexing, loaded via libblastrampoline, even in 64-bit builds of Julia.
+This allows for re-directing calls to libraries with 32 bit integer arguments, loaded via libblastrampoline, even in 64-bit builds of Julia.
 
 The simplest use is:
-```
+```julia
 using SetBlasInt
 setblasint(Int32, :all) 
 ```
-which redefines all the methods that `setblasint` knows about to use 32-bit integers for indexing. (Currently this encompasses just the gemm and syrk methods.)
+which redefines all the methods that `setblasint` knows about to use 32-bit integers. (Currently this encompasses just the gemm and syrk methods.)
 
 Alternatively, the methods to be redefined can be listed individually. For example:
 ```julia
