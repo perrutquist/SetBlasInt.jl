@@ -1,0 +1,13 @@
+name = "SetBlasInt"
+uuid = "f289dd4d-8175-47fb-b46d-c9c05674a1ea"
+authors = ["Per Rutquist <per.rutquist@gmail.com> and contributors"]
+version = "0.1.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "1.7"
+
+[targets]
+test = ["Test"]
