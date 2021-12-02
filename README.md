@@ -27,4 +27,6 @@ using LinearAlgebra
 BLAS.lbt_forward("/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate")
 ```
 
-Footnote: The re-definitions do not affect currently running functions. Typically, `setblasint` should only be called once, from the top level.
+Footnote: The re-definitions do not affect currently running functions. Typically, `setblasint` should only be called from the top level.
+
+The idea for this package came from [AppleAccelerateLinAlgWrapper](https://github.com/chriselrod/AppleAccelerateLinAlgWrapper.jl).
